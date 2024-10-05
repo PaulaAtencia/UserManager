@@ -1,0 +1,57 @@
+.user-card {
+    display: flex;
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #1e1e2f;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    width: 400px;
+    margin: 10px;
+}
+
+ion-avatar {
+    margin-right: 10px;
+}
+
+.user-info {
+    flex-grow: 1;
+}
+
+.user-name {
+    color: #007bff;
+    font-size: 24px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.additional-info {
+    color: white;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.info-label {
+    font-weight: bold;
+}
+
+.info-value {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.delete-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+.fav-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}

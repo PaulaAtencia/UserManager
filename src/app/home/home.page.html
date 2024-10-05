@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      User Manager
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">User Manager</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Aquí se cargarán dinámicamente WelcomeComponent o ManagerComponent -->
+  <router-outlet></router-outlet>
+</ion-content>
+

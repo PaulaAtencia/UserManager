@@ -1,0 +1,38 @@
+<ion-button (click)="navigateToWelcome()">
+  GO TO WELCOME
+</ion-button>
+
+<ion-content class="ion-padding">
+  <div class="form-container">
+    <!-- Formulario -->
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input (ionInput)="onNameInput($event)" [value]="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellidos</ion-label>
+      <ion-input (ionInput)="onSurnameInput($event)" [value]="surname"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Edad</ion-label>
+      <ion-input type="number" (ionInput)="onAgeInput($event)" [value]="age" min="0"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="addUser()">Añadir Usuario</ion-button>
+  </div>
+
+  <!-- Contenedor para las tarjetas -->
+  <div class="card-container">
+    <app-user-info *ngFor="let user of users; let i = index"
+      [id]="user.id"
+      [name]="user.name"
+      [surname]="user.surname"
+      [age]="user.age"
+      (userDeleted)="deleteUser(i)"
+      (onFavClicked)="onFavClicked(user, $event)"
+      > 
+    </app-user-info>
+  </div>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-card class="user-card" button="true">
+  <ion-card-header>
+
+    <div class="user-info">
+      <div style="display: flex; flex: no-wrap; direction: row;">
+        <ion-icon name="person-circle-outline"  style="font-size: 50px;"></ion-icon>
+        <h2 class="user-name">{{ name }} {{ surname | slice:0:1 | uppercase }}. {{ getSecondSurnameInitial(surname) }}</h2>
+      </div>
+
+      <div class="additional-info">
+        <p class="info-label">Nombre:</p>
+        <p class="info-value">{{ name }}</p>
+        <p class="info-label">Apellidos:</p>
+        <p class="info-value">{{ surname }}</p>
+        <p class="info-label">Edad:</p>
+        <p class="info-value">{{ age }}</p>
+      </div>
+
+      <ion-button class="fav-button" fill="clear" aria-label="Favorite" (click)="onFavClick($event)">
+       <ion-icon *ngIf="isFav" slot="icon-only"  color="danger" name="heart" aria-hidden="true"></ion-icon>
+       <ion-icon *ngIf="!isFav" slot="icon-only"  color="medium" name="heart-outline" aria-hidden="true"></ion-icon>
+      </ion-button>
+
+      <ion-button fill="clear" color="danger" (click)="deleteUser()" class="delete-button">
+        <p>Eliminar</p>
+      </ion-button>
+
+    </div>
+  </ion-card-header>
+</ion-card>

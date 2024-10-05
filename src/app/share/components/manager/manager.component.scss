@@ -1,0 +1,31 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centrar los campos de texto horizontalmente */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centrar el contenido horizontalmente */
+}
+
+.user-card {
+    flex: 1 1 30%;
+    /* Permitir que los elementos ocupen hasta el 30% del ancho */
+    max-width: 400px;
+    /* Limitar el ancho máximo a 400px para un diseño más amplio */
+    margin: 15px;
+    /* Espaciado entre tarjetas */
+}
+
+ion-input {
+    width: 100%;
+    /* Hacer que el input ocupe todo el ancho disponible del ion-item */
+}
+
+ion-button {
+    color: white;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "UserManager",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
